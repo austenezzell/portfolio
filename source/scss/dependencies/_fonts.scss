@@ -1,0 +1,157 @@
+/* ====================================
+   Font face imports
+   ==================================== */
+
+
+// FONTS
+
+@font-face {
+    font-family: 'avenirbold';
+    src: url('../fonts/avenir-heavy-webfont-webfont.eot');
+    src: url('../fonts/avenir-heavy-webfont-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/avenir-heavy-webfont-webfont.woff') format('woff'),
+         url('../fonts/avenir-heavy-webfont-webfont.ttf') format('truetype'),
+         url('../fonts/avenir-heavy-webfont-webfont.svg#avenirbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'avenirbold_italic';
+    src: url('../fonts/avenir-heavyoblique-webfont-webfont.eot');
+    src: url('../fonts/avenir-heavyoblique-webfont-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/avenir-heavyoblique-webfont-webfont.woff') format('woff'),
+         url('../fonts/avenir-heavyoblique-webfont-webfont.ttf') format('truetype'),
+         url('../fonts/avenir-heavyoblique-webfont-webfont.svg#avenirbold_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'aveniritalic';
+    src: url('../fonts/avenir-bookoblique-webfont-webfont.eot');
+    src: url('../fonts/avenir-bookoblique-webfont-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/avenir-bookoblique-webfont-webfont.woff') format('woff'),
+         url('../fonts/avenir-bookoblique-webfont-webfont.ttf') format('truetype'),
+         url('../fonts/avenir-bookoblique-webfont-webfont.svg#aveniritalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'avenirregular';
+    src: url('../fonts/avenir-book-webfont-webfont.eot');
+    src: url('../fonts/avenir-book-webfont-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/avenir-book-webfont-webfont.woff') format('woff'),
+         url('../fonts/avenir-book-webfont-webfont.ttf') format('truetype'),
+         url('../fonts/avenir-book-webfont-webfont.svg#avenirregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// AGARAMOND
+
+@font-face {
+    font-family: 'AGaramondProSemiboldItalic';
+    src: url('../fonts/AGaramondProSemiboldItalic.eot');
+    src: url('../fonts/AGaramondProSemiboldItalic.eot') format('embedded-opentype'),
+         url('../fonts/AGaramondProSemiboldItalic.woff') format('woff'),
+         url('../fonts/AGaramondProSemiboldItalic.ttf') format('truetype'),
+         url('../fonts/AGaramondProSemiboldItalic.svg#AGaramondProSemiboldItalic') format('svg');
+}
+
+@font-face {
+    font-family: 'AGaramondProRegular';
+    src: url('../fonts/AGaramondProRegular.eot');
+    src: url('../fonts/AGaramondProRegular.eot') format('embedded-opentype'),
+         url('../fonts/AGaramondProRegular.woff') format('woff'),
+         url('../fonts/AGaramondProRegular.ttf') format('truetype'),
+         url('../fonts/AGaramondProRegular.svg#AGaramondProRegular') format('svg');
+}
+
+@font-face {
+    font-family: 'AGaramondProBold';
+    src: url('../fonts/AGaramondProBold.eot');
+    src: url('../fonts/AGaramondProBold.eot') format('embedded-opentype'),
+         url('../fonts/AGaramondProBold.woff') format('woff'),
+         url('../fonts/AGaramondProBold.ttf') format('truetype'),
+         url('../fonts/AGaramondProBold.svg#AGaramondProBold') format('svg');
+}
+
+
+
+
+
+
+
+%regular-font {
+  font-family: "AGaramondProRegular",serif;
+  font-style: normal;
+}
+
+%regular-italic-font {
+  font-family: "AGaramondProSemiboldItalic",serif;
+  font-style: italic;
+}
+
+%bold-font {
+  font-family: "AGaramondProBold",serif;
+  font-style: normal;
+}
+
+// %sans-thin-font {
+//   font-family: "brandon-grotesque",sans-serif;
+//   font-style: normal;
+//   font-weight: 100;
+// }
+
+%sans-regular-font {
+  font-family: "avenirregular",sans-serif;
+  font-style: normal;
+}
+
+%sans-italic-font {
+  font-family: "aveniritalic",sans-serif;
+  font-style: italic;
+}
+
+%sans-bold-font {
+  font-family: "avenirbold",sans-serif;
+  font-style: normal;
+}
+
+/* ====================================
+    Font sizes
+   ==================================== */
+$body-line-height: 1.5;
+$header-line-height: 1.1;
+
+%small-font {
+  @include font-size(16);
+  line-height: $body-line-height;
+}
+
+%medium-font {
+  @include font-size(18);
+  line-height: $body-line-height;
+}
+
+%large-font {
+  @include font-size(28);
+  line-height: $header-line-height;
+}
+
+%xl-font {
+  @include font-size(46);
+  line-height: $header-line-height;
+}
+
+%xxl-font {
+  @include font-size(68);
+  line-height: $header-line-height;
+}
+
+%huge-font {
+  @include font-size(86);
+  line-height: $header-line-height;
+}
+
+
+

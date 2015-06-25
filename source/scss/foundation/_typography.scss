@@ -1,0 +1,90 @@
+/* ====================================
+ * Site typography
+ * ==================================== */
+
+/* Headings
+ * ==================================== */
+
+h1, h2, h3, h4, h5, h6 {
+
+  margin-top: $font-margin-top;
+  margin-bottom: $font-margin-bottom;
+  color: $color-black;
+}
+
+h1, .h1 {
+  @extend %large-font;
+  @extend %bold-font;
+  a {
+    color: $color-link;
+  }
+}
+
+h2, .h2 {
+  @extend %large-font;
+  @extend %regular-font;
+}
+
+h3, .h3 {
+  @extend %large-font;
+  @extend %bold-font;
+}
+
+h4, .h4 {
+  @extend %medium-font;
+  @extend %bold-font;
+  line-height: $header-line-height;
+}
+
+h5, .h5 {
+  @extend %medium-font;
+  @extend %bold-font;
+}
+
+h6, .h6 {
+  @extend %small-font;
+  @extend %bold-font;
+}
+
+/* Paragraphs, links and combined
+ * ==================================== */
+
+p, ul, ol, pre, table, blockquote {
+  @extend %small-font;
+  margin-top: $font-margin-top;
+  margin-bottom: $font-margin-bottom;
+  @extend %sans-regular-font;
+  @extend %medium-font;
+  color: $color-black;
+}
+
+p.intro {
+
+}
+p {
+  @extend %sans-regular-font;
+  @extend %medium-font;
+}
+
+a {
+  color: $color-link;
+  @extend %bold-font;
+}
+a:hover, a:focus {
+  color: $color-link;
+}
+
+p a {}
+
+/* Separate elements
+ * ==================================== */
+
+em {}
+
+strong, b {}
+
+i {}
+
+time {}
+
+hr {}

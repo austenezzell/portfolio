@@ -1,0 +1,23 @@
+/* ====================================
+   Buttons
+   ==================================== */
+   .btn {
+      background: #111;
+      color: #fff;
+      border: none;
+      padding: 8px 12px;
+      display: inline-block;
+      text-align: center;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      text-decoration: none;
+      user-select: none;
+      border-radius: 0;
+      text-transform: uppercase;
+      &:hover,
+      &:focus {
+        background: #777;
+        color: #fff;
+      }
+   }

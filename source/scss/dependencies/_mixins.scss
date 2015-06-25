@@ -1,0 +1,196 @@
+/* ====================================
+ * Mixins and functions
+ * ==================================== */
+
+/* Variables
+ * ==================================== */
+
+$base-spacing: 24px;
+
+$font-margin-top: $base-spacing;
+$font-margin-bottom: $base-spacing;
+
+/* Media queries
+ * ==================================== */
+
+ /* Usage: @include breakpoint(sm) {} */
+
+@mixin breakpoint($class) {
+  @if $class == xs {
+    @media (max-width: 767px) { @content; }
+  }
+
+  @else if $class == sm {
+    @media (min-width: 768px) and (max-width: 991px) { @content; }
+  }
+
+  @else if $class == md {
+    @media (min-width: 992px) and (max-width: 1199px) { @content; }
+  }
+
+  @else if $class == lg {
+    @media (min-width: 1200px) { @content; }
+  }
+
+  @else {
+    @warn "Breakpoint mixin supports: xs, sm, md, lg";
+  }
+}
+
+/* Mixins and functions
+ * ==================================== */
+
+@mixin font-size($sizeValue: 1.6) {
+  font-size: ($sizeValue * 1) + px;
+  font-size: ($sizeValue / 10) + rem;
+}
+
+@mixin regular-font() {
+  font-family: "pt-sans-regular", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@mixin bold-font() {
+  font-family: "pt-sans-bold", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+
+ /* Usage: @include underline(#fff, #ccc, 2, 1, true) */
+/* For better underlines */
+
+@mixin underline($background: #fff, $color: #ccc, $distance: 2, $width: 1, $clear-descenders: true) {
+  display: inline;
+  text-decoration: none;
+  background-repeat: repeat-x;
+
+  @include background-image(
+    linear-gradient(rgba($background, 0) 50%, $color 50%)
+  );
+
+  background-size: rem-calc(2) rem-calc($width);
+  background-position: 0 (1rem + rem-calc($distance));
+  padding-bottom: rem-calc($width) + rem-calc($distance);
+
+  @if $clear-descenders {
+    @include text-shadow(
+      rem-calc(-1) rem-calc(-1) 0 $background,
+      rem-calc(1) rem-calc(-1) 0 $background,
+      rem-calc(-1) rem-calc(1) 0 $background,
+      rem-calc(1) rem-calc(1) 0 $background
+    );
+  }
+}
+
+ /* Usage: @include placeholder() {} */
+
+@mixin placeholder() {
+  &:-moz-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &:-ms-input-placeholder { @content; }
+  &::-webkit-input-placeholder { @content; }
+}
+
+ /* Usage: @include border-radius(5px) */
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+  background-clip: padding-box;
+}
+
+ /* Usage: @include opacity(0.8) */
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+ /* Usage: @include center-block */
+
+@mixin center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+ /* Usage: @include text-truncate  */
+
+@mixin text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Extends
+ * ==================================== */
+
+%hide-text {
+  text-indent: -99999px;
+  direction: ltr;
+}
+
+%visually-hidden {
+  position: absolute !important;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+%clearfix {
+  *zoom: 1;
+  &:before {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    content: " ";
+    display: table;
+    clear: both;
+  }
+}
+
+%vertical-align {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+
+
+/* Usage: @include aspect-ratio(4, 6);  */
+
+@mixin aspect-ratio($width, $height) {
+ position: relative;
+ &:before {
+   display: block;
+   content: "";
+   width: 100%;
+   padding-top: ($height / $width) * 100%;
+ }
+ > .content {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+ }
+}
+
+
+.four-six {
+  @include aspect-ratio(4, 6);
+}
+
+.six-four {
+  @include aspect-ratio(6, 4);
+}

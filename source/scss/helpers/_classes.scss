@@ -1,0 +1,215 @@
+/* ====================================
+ * Global Classes.
+ * ==================================== */
+
+/* Padding
+ * ==================================== */
+
+.padding {
+  padding: $base-spacing;
+}
+
+.padding-vertical {
+  padding-top: $base-spacing;
+  padding-bottom: $base-spacing;
+}
+
+.padding-vertical-10 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.padding-horizontal {
+  padding-right: $base-spacing;
+  padding-bottom: $base-spacing;
+}
+
+.padding-horizontal-10 {
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.padding-top {
+  padding-top: $base-spacing;
+}
+
+.padding-right {
+  padding-right: $base-spacing;
+}
+
+.padding-bottom {
+  padding-bottom: $base-spacing;
+}
+
+.padding-left {
+  padding-left: $base-spacing;
+}
+
+.padding-0 {
+  padding: 0;
+}
+
+
+/* margin
+ * ==================================== */
+
+.margin {
+  margin: $base-spacing;
+}
+
+.margin-vertical {
+  margin-top: $base-spacing * 7;
+  margin-bottom: $base-spacing * 7;
+}
+
+.margin-vertical-10 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.margin-horizontal {
+  margin-right: $base-spacing;
+  margin-bottom: $base-spacing;
+}
+
+.margin-horizontal-10 {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.margin-top {
+  margin-top: $base-spacing * 2;
+}
+
+.margin-right {
+  margin-right: $base-spacing;
+}
+
+.margin-bottom {
+  margin-bottom: $base-spacing * 7;
+}
+
+.margin-left {
+  margin-left: $base-spacing;
+}
+
+.margin-0 {
+  margin: 0;
+}
+
+/* List
+ * ==================================== */
+
+.list-inline {
+  li {
+    display: inline-block;
+  }
+}
+
+/* Floats
+ * ==================================== */
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+/* Text Align
+ * ==================================== */
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* Text Align
+ * ==================================== */
+
+.border {
+  border: 1px solid #eee;
+}
+
+.border-top {
+  border-top: 1px solid #eee;
+}
+
+.border-right {
+  border-right: 1px solid #eee;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #eee;
+}
+
+.border-left {
+  border-left: 1px solid #eee;
+}
+
+/* Utilities
+ * ==================================== */
+
+.break {
+  display: block;
+  @include breakpoint(lg) {
+    display: inline;
+  }
+  @include breakpoint(md) {
+    display: inline;
+  }
+  @include breakpoint(sm) {
+    display: inline;
+  }
+}
+
+.block {
+  display: block;
+}
+
+.inline {
+  display: inline;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.showgrid [class*="col-"] {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #eee;
+  background-color: rgba(86,61,124,.15);
+  border: 1px solid #ddd;
+  border: 1px solid rgba(86,61,124,.2);
+}
+
+
+
+/* Position
+ * ==================================== */
+
+ .fixed {
+  position: fixed;
+ }
+
+ .absolute {
+  position: absolute;
+ }
+
+
+ /* Hidden
+ * ==================================== */
+  .xs-hidden {
+    @include breakpoint(xs) {
+      display: none!important;
+    }
+  }

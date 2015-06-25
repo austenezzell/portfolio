@@ -1,0 +1,184 @@
+/* ====================================
+ * The Worlds Game
+ * ==================================== */
+
+.theworldsgame {
+    header {
+        position: fixed;
+        top: $base-spacing * 1;
+        left: 24px;
+        h1 {
+          @extend %medium-font;
+          @extend %bold-font;
+          margin: 0;
+        }
+        a {
+            color: $color-black;
+        }
+    }
+    .footer {
+        h4 {
+            margin: 0 0 12px;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            li {
+                list-style: none;
+                position: relative;
+                padding-left: 30px;
+                &:before {
+                    content: '—';
+                    position: absolute;
+                    left: 0;
+
+                }
+            }
+        }
+    }
+}
+.slider {
+    overflow: hidden;
+    img {
+        z-index: 5;
+    }
+    .slick-disabled {
+        opacity: 0;
+    }
+    .slick-prev, .slick-next {
+        width: 28px;
+        height: 22px;
+        top: 50%;
+        margin-top: -11px;
+        position: absolute;
+    }
+    .slick-prev:before, .slick-next:before {
+        @extend %regular-font;
+        font-size: 30px;
+        color: red;
+    }
+    .slick-prev {
+        left: 24px;
+    }
+    .slick-next {
+        right: 24px;
+    }
+}
+.project-info {
+    position: fixed;
+    top: 24px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(black,1);
+    padding: 24px;
+    padding-top: $base-spacing * 3;
+    overflow: scroll;
+    z-index: 5;
+    p {
+        @extend %xxl-font;
+        line-height: $body-line-height;
+        @extend %sans-regular-font;
+        @include breakpoint(xs) {
+            @include font-size(28);
+        }
+        @include breakpoint(med) {
+            @include font-size(46);
+        }
+    }
+    a.close-info {
+          @extend %medium-font;
+          @extend %bold-font;
+          margin: 0;
+          position: fixed;
+          top:24px;
+          right: 24px;
+          color: red;
+    }
+}
+.project-info-link {
+    position: absolute;
+    left: 0;
+    padding-left: $base-spacing * 1;
+    bottom: $base-spacing * 1;
+    z-index:1;
+    // background: linear-gradient(to right, rgba(white,1) 30%,rgba(white,0) 100%);
+    width: 50%;
+    a {
+        margin: 0;
+        color: black;
+    }
+}
+.image-container {
+    position: relative;
+    z-index: 1;
+    .module {
+        position: absolute;
+        overflow: hidden;
+        text-align: center;
+        &.matted {
+            left: $base-spacing * 6;
+            right: $base-spacing * 6;
+            top: $base-spacing * 4;
+            bottom: $base-spacing * 4;
+            @include breakpoint(xs) {
+                left: $base-spacing * 3;
+                right: $base-spacing * 3;
+                top: $base-spacing * 6;
+                bottom: $base-spacing * 6;
+            }
+        }
+        &.full-screen {
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+        .small {
+            margin-top: 12px;
+        }
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+        .three-by-two {
+            width: 100%;
+            height: auto;
+            max-width: 950px;
+        }
+        .two-by-three {
+            width: auto;
+            height: 100%;
+            max-height: 950px;
+        }
+        .cover {
+            width: 100%;
+            height: auto;
+        }
+
+    }
+    .caption {
+        position: absolute;
+        right:24px;
+        bottom: $base-spacing * 1;
+        z-index: -2;
+        margin: 0;
+        @extend %bold-font;
+    }
+}
+.paging-info {
+    position: absolute;
+    width: 100px;
+    left: 50%;
+    margin-left:15px;
+    bottom: $base-spacing * 1;
+    z-index: -2;
+    margin: 0;
+    p {
+        margin: 0;
+        @extend %bold-font;
+    }
+}
