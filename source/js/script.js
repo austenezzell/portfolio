@@ -6,8 +6,6 @@
 var aeApp = aeApp || {};
 
 
-
-
     aeApp.resize = function() {
         aeApp.windowHeight      = $(window).height();
         aeApp.windowWidth       = $(window).width();
@@ -101,7 +99,6 @@ var aeApp = aeApp || {};
     aeApp.lightboxIn = function(link, closeLink, lightbox){
       link.click(function(e){
         e.preventDefault();
-        console.log('clicked');
         lightbox.velocity("stop").velocity({
             opacity: "1",
             top: 0
@@ -125,11 +122,16 @@ var aeApp = aeApp || {};
     }
 
 
+
+
+
 /* ====================================
    Onload functions
    ==================================== */
 
 ;(function($, window, document) {
+
+
 
   aeApp.lightboxIn($('.project-info-link a'), $('.close-info'), $('.project-info') );
 
@@ -158,6 +160,7 @@ var aeApp = aeApp || {};
     }
   });
 
+  // aeApp.onload();
   aeApp.slider();
   aeApp.resize();
 
@@ -168,6 +171,21 @@ var aeApp = aeApp || {};
   aeApp.transitionBegin   = (aeApp.documentHeight - aeApp.windowHeight) - 100;
 
   aeApp.scroll();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -84,8 +84,16 @@
         @include breakpoint(xs) {
             @include font-size(28);
         }
-        @include breakpoint(med) {
+        @include breakpoint(md) {
             @include font-size(46);
+        }
+        a {
+          color: $color-black;
+          @extend %sans-regular-font;
+          text-decoration: underline;
+          &:hover {
+            color: $color-red;
+          }
         }
     }
     a.close-info {

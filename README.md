@@ -1,4 +1,4 @@
-# Uno
+# AE 2015 Portfolio
 Cinco's Gulp based starter kit
 
 * [Gulp](http://gulpjs.com/)

@@ -12,7 +12,10 @@
         @include breakpoint(xs) {
             @include font-size(28);
         }
-        @include breakpoint(med) {
+        @include breakpoint(sm) {
+            @include font-size(46);
+        }
+        @include breakpoint(md) {
             @include font-size(46);
         }
         @extend %xxl-font;
