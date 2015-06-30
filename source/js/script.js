@@ -85,7 +85,7 @@ var aeApp = aeApp || {};
             })
           });
 
-          active.parent().velocity("stop").velocity({
+          $('body').velocity({
               backgroundColor: bgColor
           }, {
               duration: 400,
