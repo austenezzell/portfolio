@@ -1,8 +1,15 @@
 /* ====================================
- * The Worlds Game
+ * photo-page
  * ==================================== */
 
-.theworldsgame {
+ .black-bg {
+   .photo-page header a, .photo-page header h1, .project-info-link a, .paging-info p, p {
+     color: $color-gray;
+   }
+ }
+
+.photo-page {
+
     header {
         position: fixed;
         top: $base-spacing * 1;
@@ -13,8 +20,38 @@
           margin: 0;
         }
         a {
-            color: $color-black;
+          color: $color-black;
         }
+    }
+
+    .main-content {
+      .intro {
+        padding-top: $base-spacing * 3;
+        padding-left: 8px;
+        padding-right: $base-spacing * 1;
+        p.comma {
+          padding-right: 24px;
+          float: left;
+          @include breakpoint(xs) {
+              @include font-size(28);
+          }
+          @include breakpoint(sm) {
+              @include font-size(46);
+          }
+          @include breakpoint(md) {
+              @include font-size(46);
+          }
+          @extend %xxl-font;
+          line-height: $body-line-height;
+          @extend %sans-regular-font;
+          color: $color-black;
+          margin: 0;
+        }
+      }
+    }
+    .photo-collection {
+      float: left;
+
     }
     .footer {
         h4 {
@@ -170,7 +207,8 @@
     }
     .caption {
         position: absolute;
-        right:24px;
+        left:83%;
+        padding-left: 15px;
         bottom: $base-spacing * 1;
         z-index: -2;
         margin: 0;
@@ -180,8 +218,8 @@
 .paging-info {
     position: absolute;
     width: 100px;
-    left: 50%;
-    margin-left:15px;
+    left: 66.64%;
+    padding-left:15px;
     bottom: $base-spacing * 1;
     z-index: -2;
     margin: 0;

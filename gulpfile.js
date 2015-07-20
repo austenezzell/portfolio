@@ -65,7 +65,6 @@ gulp.task('scripts', function () {
 gulp.task('images', function() {
   return gulp.src(source + '/img/**/*')
     .pipe($.plumber(plumberConfig))
-    .pipe($.cache($.imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
     .pipe(gulp.dest(build + '/img'));
 });
 

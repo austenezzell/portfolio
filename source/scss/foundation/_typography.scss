@@ -58,6 +58,27 @@ p, ul, ol, pre, table, blockquote {
   color: $color-black;
 }
 
+.intro, .intro a  {
+    @include breakpoint(xs) {
+        @include font-size(28);
+    }
+    @include breakpoint(sm) {
+        @include font-size(46);
+    }
+    @include breakpoint(md) {
+        @include font-size(46);
+    }
+    @extend %xxl-font;
+    line-height: $body-line-height;
+    @extend %sans-regular-font;
+    color: $color-black;
+}
+.intro a  {
+  &:hover {
+    color: $color-red;
+  }
+}
+
 p.intro {
 
 }
